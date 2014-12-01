@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: b84f3cd5abee29b489cb84514e6bf878
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: __PRP_blades_single
+    100002: _PRP_base
+    100004: _PRP_blades_wire
+    100006: _PRP_lever
+    100008: _PRP_levermount
+    100010: _PRP_mount
+    100012: _PRP_roof
+    100014: _PRP_roofclosure
+    100016: _PRP_struts
+    100018: _PRP_walkway
+    100020: //RootNode
+    400000: __PRP_blades_single
+    400002: _PRP_base
+    400004: _PRP_blades_wire
+    400006: _PRP_lever
+    400008: _PRP_levermount
+    400010: _PRP_mount
+    400012: _PRP_roof
+    400014: _PRP_roofclosure
+    400016: _PRP_struts
+    400018: _PRP_walkway
+    400020: //RootNode
+    2300000: __PRP_blades_single
+    2300002: _PRP_base
+    2300004: _PRP_blades_wire
+    2300006: _PRP_lever
+    2300008: _PRP_levermount
+    2300010: _PRP_mount
+    2300012: _PRP_roof
+    2300014: _PRP_roofclosure
+    2300016: _PRP_struts
+    2300018: _PRP_walkway
+    3300000: __PRP_blades_single
+    3300002: _PRP_base
+    3300004: _PRP_blades_wire
+    3300006: _PRP_lever
+    3300008: _PRP_levermount
+    3300010: _PRP_mount
+    3300012: _PRP_roof
+    3300014: _PRP_roofclosure
+    3300016: _PRP_struts
+    3300018: _PRP_walkway
+    4300000: __PRP_blades_single
+    4300002: _PRP_blades_wire
+    4300004: _PRP_mount
+    4300006: _PRP_lever
+    4300008: _PRP_levermount
+    4300010: _PRP_struts
+    4300012: _PRP_walkway
+    4300014: _PRP_roofclosure
+    4300016: _PRP_roof
+    4300018: _PRP_base
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
