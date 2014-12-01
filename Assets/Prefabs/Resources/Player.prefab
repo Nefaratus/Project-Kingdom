@@ -2189,7 +2189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   P_Level: 0
-  P_Health: 0
+  P_Health: -230
   P_MaxHealth: 0
   P_Mana: 0
   P_MaxMana: 0
