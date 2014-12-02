@@ -9,6 +9,7 @@ public class PlayerStatus : Photon.MonoBehaviour {
 	private int P_Attributes;
 	public float HealthBarLength;
 	public string playerName;
+	bool possible = true;
 
 	public Transform P_Transform;
 
@@ -42,10 +43,14 @@ public class PlayerStatus : Photon.MonoBehaviour {
 			//Health Bar
 			GUI.Box(new Rect (10, 10, HealthBarLength, 20), P_Health + "/" + P_MaxHealth);
 
+			if(possible == true)
+			{
 			playerName = GUI.TextField (new Rect (10, Screen.height / 2, Screen.width /12, 20), playerName, 15);
 			if(GUI.Button(new Rect (10, Screen.height / 2 + 20, Screen.width /12, 20),"Set Name"))
 			{
 				photonView.RPC("SetName", PhotonTargets.AllBuffered, playerName);
+					possible = false;
+			}
 			}
 
 		}
