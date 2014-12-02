@@ -13,13 +13,13 @@ public class GeneralGUI : MonoBehaviour {
 	QuestCreator Q_createUI;
 	ChatBox C_Box;
 	public Vector3 Village1Cor, Village2Cor;
-
+	public string des;
 	// Use this for initialization
 	void Start () {
 		MasterVolume = 50;
 		Music = 50;
 		Sound = 50;
-		
+
 		player = (PlayerStatus)target.GetComponent ("PlayerStatus");
 		Q_logUI = player.GetComponent<QuestLog> ();
 		Q_createUI = player.GetComponent<QuestCreator>();
@@ -160,7 +160,7 @@ public class GeneralGUI : MonoBehaviour {
 
 			GUI.EndGroup();
 		}
-
+		/*
 		if(options == true)
 		{
 			GUI.BeginGroup(new Rect (Screen.width/3.5f, Screen.height/3.5f, Screen.width/2 + 10, Screen.height/3),"Options","box");
@@ -190,7 +190,12 @@ public class GeneralGUI : MonoBehaviour {
 
 
 			GUI.EndGroup();
-		}
+		}*/
+
+		
+		des = gameObject.GetComponentInParent<Destination> ().destination;
+		GUI.Label (new Rect (Screen.width - Screen.width/7.5f, Screen.height - Screen.height + 5, 
+		                     Screen.width/10, Screen.height/30), des == null ? "Location : Somewhere" : "Location : " + des );
 
 
 

@@ -477,6 +477,8 @@ GameObject:
   - 114: {fileID: 11400028}
   - 114: {fileID: 11400030}
   - 114: {fileID: 11400032}
+  - 23: {fileID: 2300000}
+  - 102: {fileID: 10200000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2104,6 +2106,26 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+--- !u!23 &2300000
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100060}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!81 &8100000
 AudioListener:
   m_ObjectHideFlags: 1
@@ -2133,6 +2155,27 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!102 &10200000
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100060}
+  m_Text: 
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 1
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2200,6 +2243,7 @@ MonoBehaviour:
   y: 10
   z: 0
   HealthBarLength: 0
+  playerName: 
   P_Transform: {fileID: 400060}
 --- !u!114 &11400010
 MonoBehaviour:
@@ -2303,6 +2347,7 @@ MonoBehaviour:
   z: 344
   Village1Cor: {x: -260.179993, y: 9.38000011, z: 162.570007}
   Village2Cor: {x: 268.929993, y: 3.80999994, z: -87.2600021}
+  des: 
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2446,6 +2491,7 @@ MonoBehaviour:
   Q_Name: 
   Q_Description: 
   Q_Objective: 0
+  s_Type: 0
   showCreator: 0
 --- !u!114 &11400028
 MonoBehaviour:

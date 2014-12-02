@@ -1,15 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerInput.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Quests\QuestCreator.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\PlayerInput.cs" Line="79" Column="4" />
-      <File FileName="Assets\Scripts\Player\PlayerStatus.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Quests\QuestCreator.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\GeneralGUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerStatus.cs" Line="173" Column="26" />
+      <File FileName="Assets\Scripts\Multiplayer\NetworkManager2.cs" Line="67" Column="35" />
+      <File FileName="Assets\Scripts\Quests\QuestCreator.cs" Line="31" Column="2" />
+      <File FileName="Assets\Scripts\UI\GeneralGUI.cs" Line="85" Column="119" />
       <File FileName="Assets\Scripts\Quests\QuestLog.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\ChatBox.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\ChatBox.cs" Line="99" Column="81" />
       <File FileName="Assets\Scripts\Multiplayer\NetworkCharacter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Combat\Combat.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerInput.cs" Line="96" Column="1" />
+      <File FileName="Assets\Scripts\Combat\PlayerTargeting.cs" Line="59" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

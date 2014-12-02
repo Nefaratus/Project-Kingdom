@@ -53,6 +53,7 @@ public class QuestLog : Photon.MonoBehaviour {
 					
 					GUILayout.Label("Description: \n" + questCreator.Q_List[i].Q_Description + "\n");
 					GUILayout.Label("Destination: " + questCreator.Q_List[i].Q_Destination + "\n");
+					GUILayout.Label("Created by : " + questCreator.Q_List[i].Q_Author + "\n");
 
 					if(questCreator.Q_List[i].Q_Destination == gameObject.GetComponent<Destination>().destination)
 					{						

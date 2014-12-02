@@ -120,7 +120,6 @@
      <Compile Include="Assets\Scripts\Quests\QuestCreator.cs" />
      <Compile Include="Assets\Scripts\Quests\QuestLog.cs" />
      <Compile Include="Assets\Scripts\Quests\Quests.cs" />
-     <Compile Include="Assets\Scripts\Quests\QuestsList.cs" />
      <Compile Include="Assets\Scripts\System\GameController.cs" />
      <Compile Include="Assets\Scripts\System\MainMenu.cs" />
      <Compile Include="Assets\Scripts\System\TagsManagement.cs" />

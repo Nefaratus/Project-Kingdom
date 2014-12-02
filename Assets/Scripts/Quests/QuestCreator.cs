@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class QuestCreator : Photon.MonoBehaviour {
 
 	public string Q_Name, Q_Description;
-	public int Q_Objective;
+	public int Q_Objective,s_Type;
 	Quests N_Quest;
 	public bool showCreator;
 	GameObject[] places,players;
@@ -28,6 +28,8 @@ public class QuestCreator : Photon.MonoBehaviour {
 		G_height = Screen.height/2;
 
 	}
+
+
 
 	void OnGUI()
 	{
@@ -60,7 +62,7 @@ public class QuestCreator : Photon.MonoBehaviour {
 
 			if(GUI.Button (new Rect (Border_width / 3.5f,Border_height + Border_height /1.5f ,G_width /3,G_height / 10), "Set Quest"))
 			{
-				photonView.RPC("CreateQuest", PhotonTargets.AllBuffered, Q_Name,Q_Description,places[p].name);
+				photonView.RPC("CreateQuest", PhotonTargets.AllBuffered, Q_Name,Q_Description,places[p].name,gameObject.name);
 			}
 
 			GUI.EndGroup();
@@ -68,12 +70,13 @@ public class QuestCreator : Photon.MonoBehaviour {
 		}
 	}
 		
-	public void AddQuest(string Q_name,string Q_Descr, string Q_desti)
+	public void AddQuest(string Q_name,string Q_Descr, string Q_desti,string Q_author)
 	{
 		N_Quest = new Quests();
 		N_Quest.Q_Name = Q_name;
 		N_Quest.Q_Description = Q_Descr;
 		N_Quest.Q_Destination = Q_desti;
+		N_Quest.Q_Author = Q_author;
 		Q_List.Add(N_Quest);
 		Q_Name = "";
 		Q_Description = "";
@@ -81,13 +84,13 @@ public class QuestCreator : Photon.MonoBehaviour {
 	}
 
 	[RPC]
-	void CreateQuest(string Q_name,string Q_Descr, string Q_desti, PhotonMessageInfo info)
+	void CreateQuest(string Q_name,string Q_Descr, string Q_desti,string Q_author, PhotonMessageInfo info)
 	{
 		players = GameObject.FindGameObjectsWithTag("Player");
 		foreach (GameObject player in players) 
 		{
 			//This is so that on every player with this script on it will invoke the method AddQuest
-			player.GetComponent<QuestCreator>().AddQuest(Q_name, Q_Descr, Q_desti);
+			player.GetComponent<QuestCreator>().AddQuest(Q_name, Q_Descr, Q_desti,Q_author);
 		}
 	}
 
