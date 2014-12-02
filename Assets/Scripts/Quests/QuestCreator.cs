@@ -80,7 +80,6 @@ public class QuestCreator : Photon.MonoBehaviour {
 		Q_List.Add(N_Quest);
 		Q_Name = "";
 		Q_Description = "";
-		Debug.Log(Q_List.Count );
 	}
 
 	[RPC]
