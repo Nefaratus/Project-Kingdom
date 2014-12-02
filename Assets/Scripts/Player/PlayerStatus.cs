@@ -45,7 +45,7 @@ public class PlayerStatus : Photon.MonoBehaviour {
 			playerName = GUI.TextField (new Rect (10, Screen.height / 2, Screen.width /12, 20), playerName, 15);
 			if(GUI.Button(new Rect (10, Screen.height / 2 + 20, Screen.width /12, 20),"Set Name"))
 			{
-				SetName(playerName);
+				photonView.RPC("SetName", PhotonTargets.AllBuffered, playerName);
 			}
 
 		}
