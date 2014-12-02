@@ -32,9 +32,11 @@ public class PlayerTargeting : Targeting
 				hp_max = "-";
 				hp = "-";
 			}
-			GUI.Box (new Rect (10, 35, 100, 100), "");
-			GUI.Label (new Rect (15, 40, 100, 30), _target != null ? _target.name : "");
-			GUI.Label (new Rect (15, 60, 100, 30), hp + "/" + hp_max);
+
+			float width = _target.GetComponent<PlayerStatus>().HealthBarLength;
+			GUI.Box (new Rect (10, 35, width < 97 ? 97 : width, 50), _target != null ? _target.name + "\n" + hp + "/" + hp_max : "" );
+		//	GUI.Label (new Rect (15, 40, 100, 30), _target != null ? _target.name : "");
+			//GUI.Label (new Rect (15, 60, 100, 30), hp + "/" + hp_max);
 		}
 	}
 	

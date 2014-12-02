@@ -78,6 +78,7 @@ public class QuestCreator : Photon.MonoBehaviour {
 		Q_Name = "";
 		Q_Description = "";
 		Debug.Log(Q_List.Count );
+		gameObject.name = Q_name;
 	}
 
 	[RPC]

@@ -103,7 +103,6 @@ public class ChatBox : Photon.MonoBehaviour {
 
 	public void AddMessage(string text)
 	{
-
 		this.chatHistory.Add(text);
 		if (this.chatHistory.Count > 20)
 			this.chatHistory.RemoveAt(0);
@@ -115,7 +114,7 @@ public class ChatBox : Photon.MonoBehaviour {
 		players = GameObject.FindGameObjectsWithTag("Player");
 		foreach (GameObject player in players) 
 		{			
-			player.GetComponent<ChatBox>().AddMessage("[" + info.sender + "] :" + text);
+			player.GetComponent<ChatBox>().AddMessage("[" + this.gameObject.name + "] :" + text);
 		}
 	}
 

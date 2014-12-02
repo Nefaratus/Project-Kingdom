@@ -8,6 +8,7 @@ public class PlayerStatus : Photon.MonoBehaviour {
 	public int x, y, z;
 	private int P_Attributes;
 	public float HealthBarLength;
+	public string playerName;
 
 	public Transform P_Transform;
 
@@ -37,10 +38,18 @@ public class PlayerStatus : Photon.MonoBehaviour {
 	{
 		if(photonView.isMine)
 		{
-			GUI.backgroundColor = Color.red;
+			//GUI.backgroundColor = Color.red;
 			//Health Bar
 			GUI.Box(new Rect (10, 10, HealthBarLength, 20), P_Health + "/" + P_MaxHealth);
+
+			playerName = GUI.TextField (new Rect (10, Screen.height / 2, Screen.width /12, 20), playerName, 10);
+			if(GUI.Button(new Rect (10, Screen.height / 2 + 20, Screen.width /12, 20),"Set Name"))
+			{
+				SetName(playerName);
+			}
+
 		}
+
 	}
 		
 
@@ -147,7 +156,9 @@ public class PlayerStatus : Photon.MonoBehaviour {
 
 	}
 
-
-
+	public void SetName(string name)
+	{
+		gameObject.name = name;
+	}
 	                   
 }
