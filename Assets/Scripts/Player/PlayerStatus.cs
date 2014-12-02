@@ -156,9 +156,14 @@ public class PlayerStatus : Photon.MonoBehaviour {
 
 	}
 
+	[RPC]
 	public void SetName(string name)
 	{
-		gameObject.name = name;
+		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+		foreach (GameObject player in players) 
+		{
+			gameObject.name = name;
+		}
 	}
 	                   
 }
