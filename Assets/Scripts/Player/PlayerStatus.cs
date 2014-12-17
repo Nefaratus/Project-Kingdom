@@ -49,8 +49,7 @@ public class PlayerStatus : Photon.MonoBehaviour {
 			{
 			playerName = GUI.TextField (new Rect (10, Screen.height / 2, Screen.width /12, 20), playerName, 15);
 			if(GUI.Button(new Rect (10, Screen.height / 2 + 20, Screen.width /12, 20),"Set Name"))
-			{
-				
+			{				
 				photonView.RPC("SetName", PhotonTargets.AllBuffered, playerName);
 					possible = false;
 			}
@@ -167,11 +166,7 @@ public class PlayerStatus : Photon.MonoBehaviour {
 	[RPC]
 	public void SetName(string name)
 	{
-		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-		foreach (GameObject player in players) 
-		{
-		gameObject.name = name;
-		}
+			this.gameObject.name = name;
 	}
 	                   
 }

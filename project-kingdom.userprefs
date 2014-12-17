@@ -1,16 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Quests\QuestCreator.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\Trigger.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\PlayerStatus.cs" Line="173" Column="26" />
-      <File FileName="Assets\Scripts\Multiplayer\NetworkManager2.cs" Line="67" Column="35" />
-      <File FileName="Assets\Scripts\Quests\QuestCreator.cs" Line="31" Column="2" />
-      <File FileName="Assets\Scripts\UI\GeneralGUI.cs" Line="85" Column="119" />
-      <File FileName="Assets\Scripts\Quests\QuestLog.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\ChatBox.cs" Line="99" Column="81" />
-      <File FileName="Assets\Scripts\Multiplayer\NetworkCharacter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\PlayerInput.cs" Line="96" Column="1" />
-      <File FileName="Assets\Scripts\Combat\PlayerTargeting.cs" Line="59" Column="2" />
+      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\Trigger.cs" Line="23" Column="29" />
+      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\OutMessage.cs" Line="21" Column="3" />
+      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\Interface.cs" Line="30" Column="16" />
+      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\OutMessageBehaviour.cs" Line="24" Column="35" />
+      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\TrafficLightLamp.cs" Line="35" Column="20" />
+      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\NavController.cs" Line="55" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

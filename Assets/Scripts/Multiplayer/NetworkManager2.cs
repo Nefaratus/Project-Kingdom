@@ -18,8 +18,8 @@ public class NetworkManager2 : MonoBehaviour {
 		PhotonNetwork.ConnectUsingSettings("0.22");
 
 		//If offline is necessary uncomment this
-		//PhotonNetwork.offlineMode = true;	
-		//PhotonNetwork.CreateRoom("some name");
+		PhotonNetwork.offlineMode = true;	
+		PhotonNetwork.CreateRoom("some name");
 	}
 
 	void OnGUI()
