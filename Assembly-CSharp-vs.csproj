@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>S:/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>F:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>S:/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +111,7 @@
      <Compile Include="Assets\Scripts\Enemy\Patrol.cs" />
      <Compile Include="Assets\Scripts\Multiplayer\NetworkCharacter.cs" />
      <Compile Include="Assets\Scripts\Multiplayer\NetworkManager2.cs" />
+     <Compile Include="Assets\Scripts\MyExtensions.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCStatus.cs" />
      <Compile Include="Assets\Scripts\Player\AdvanceMovement.cs" />
      <Compile Include="Assets\Scripts\Player\HashID.cs" />
@@ -120,6 +121,8 @@
      <Compile Include="Assets\Scripts\Quests\QuestCreator.cs" />
      <Compile Include="Assets\Scripts\Quests\QuestLog.cs" />
      <Compile Include="Assets\Scripts\Quests\Quests.cs" />
+     <Compile Include="Assets\Scripts\SaveLoad\CharacterSettings.cs" />
+     <Compile Include="Assets\Scripts\SaveLoad\SettingList.cs" />
      <Compile Include="Assets\Scripts\System\GameController.cs" />
      <Compile Include="Assets\Scripts\System\MainMenu.cs" />
      <Compile Include="Assets\Scripts\System\TagsManagement.cs" />
@@ -139,13 +142,13 @@
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
      <None Include="Assets\Imported\Photon Unity Networking\changelog.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Jan/Documents/Project Kingdom/Project-Kingdom/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>S:/Git/Project-Kingdom/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ <HintPath>S:/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Jan/Documents/Project Kingdom/Project-Kingdom/Assets/Imported/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>S:/Git/Project-Kingdom/Assets/Imported/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

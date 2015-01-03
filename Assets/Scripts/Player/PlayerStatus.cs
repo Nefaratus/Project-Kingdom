@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerStatus : Photon.MonoBehaviour {
+public class PlayerStatus : Photon.MonoBehaviour{
 
 	//test
 	public int P_Level, P_Health,P_MaxHealth, P_Mana ,P_MaxMana,P_Stamina,P_MaxStamina , P_Experience;
@@ -18,7 +18,12 @@ public class PlayerStatus : Photon.MonoBehaviour {
 	{
 		P_Health = 100;
 		P_MaxHealth = 100;
-
+		CharacterSettings cs = new CharacterSettings();
+		cs.name = "Bob";
+		cs.health = 100;
+		CharacterSettings bs = new CharacterSettings();
+		bs.fillFields(cs.ToString());
+		Transform t;
 	}
 
 	void FixedUpdate()

@@ -1,13 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\Trigger.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MyExtensions.cs">
     <Files>
-      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\Trigger.cs" Line="23" Column="29" />
-      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\OutMessage.cs" Line="21" Column="3" />
-      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\Interface.cs" Line="30" Column="16" />
-      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\OutMessageBehaviour.cs" Line="24" Column="35" />
-      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\TrafficLightLamp.cs" Line="35" Column="20" />
-      <File FileName="..\..\GitHub\Software-Development\Simulator\Assets\Scripts\NavController.cs" Line="55" Column="6" />
+      <File FileName="Assets\Scripts\SaveLoad\SettingList.cs" Line="15" Column="21" />
+      <File FileName="Assets\Scripts\SaveLoad\CharacterSettings.cs" Line="8" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerStatus.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MyExtensions.cs" Line="6" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
