@@ -6,13 +6,14 @@ using System.Linq;
 using System.IO;
 
 public class SaveManager {
+	string dir = @"s:\saves\";
 	public Dictionary<string, CharacterSettings> saves;
 	private string EXT = "pkc";
 	// Use this for initialization
 
 	public void create(CharacterSettings cs, string name){
 		if(cs != null){
-			string fileName = Application.persistentDataPath + name + "." + EXT;
+			string fileName = dir + name + "." + EXT;
 			string file = cs.ToString();
 			try{
 				File.WriteAllText(fileName, file);
@@ -24,7 +25,8 @@ public class SaveManager {
 
 	public void refresh(){
 		saves = new Dictionary<string, CharacterSettings>();
-		string[] filePaths = Directory.GetFiles(Application.persistentDataPath);
+		//Debug.Log(""+Application.persistentDataPath);
+		string[] filePaths = Directory.GetFiles(dir);
 		foreach(string s in filePaths){
 			if(Path.GetExtension(s) == EXT){
 				
