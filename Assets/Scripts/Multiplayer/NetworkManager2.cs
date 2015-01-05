@@ -6,6 +6,7 @@ public class NetworkManager2 : MonoBehaviour {
 	
 	public GameObject standbyCamera;
 	public int x , y ,z ;
+	public bool offline = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +19,10 @@ public class NetworkManager2 : MonoBehaviour {
 		PhotonNetwork.ConnectUsingSettings("0.22");
 
 		//If offline is necessary uncomment this
+		if(offline){
 		PhotonNetwork.offlineMode = true;	
 		PhotonNetwork.CreateRoom("some name");
+		}
 	}
 
 	void OnGUI()
