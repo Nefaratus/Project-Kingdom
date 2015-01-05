@@ -10,7 +10,7 @@ public class PlayerStatus : Photon.MonoBehaviour{
 	public float HealthBarLength;
 	public string playerName;
 	bool possible = true;
-
+	public CharacterSettings cs;
 	public Transform P_Transform;
 
 
@@ -18,11 +18,7 @@ public class PlayerStatus : Photon.MonoBehaviour{
 	{
 		P_Health = 100;
 		P_MaxHealth = 100;
-		CharacterSettings cs = new CharacterSettings();
-		cs.name = "Bob";
-		cs.health = 100;
-		CharacterSettings bs = new CharacterSettings();
-		bs.fillFields(cs.ToString());
+		cs = new CharacterSettings();
 		Transform t;
 	}
 

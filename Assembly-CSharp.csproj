@@ -122,6 +122,7 @@
      <Compile Include="Assets\Scripts\Quests\QuestLog.cs" />
      <Compile Include="Assets\Scripts\Quests\Quests.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\CharacterSettings.cs" />
+     <Compile Include="Assets\Scripts\SaveLoad\SaveManager.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\SettingList.cs" />
      <Compile Include="Assets\Scripts\System\GameController.cs" />
      <Compile Include="Assets\Scripts\System\MainMenu.cs" />
