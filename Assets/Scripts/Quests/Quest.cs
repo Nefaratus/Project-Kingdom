@@ -10,6 +10,7 @@ public class Quest{
 	public string Q_Author;
 	public bool Q_DestReached;
 	public bool Q_Completed;
+	public int ObjectiveComplete = 0;
 
 	public void NewObjective(string name,int Amount, string tag)
 	{

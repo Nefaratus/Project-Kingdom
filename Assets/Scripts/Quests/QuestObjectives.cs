@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class QuestObjectives{
-	public bool ObjectiveComplete;
+	public bool ObjectiveComplete = false;
 	public string ObjectiveName,Tag;
     public int Q_Amount;
 	public GameObject Objective;

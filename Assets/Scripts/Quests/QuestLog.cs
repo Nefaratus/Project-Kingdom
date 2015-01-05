@@ -8,7 +8,6 @@ public class QuestLog : Photon.MonoBehaviour {
 	public GUIStyle buttonStyle;
 	QuestCreator questCreator;
 	int counter;
-	int ObjectiveComplete = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -42,9 +41,9 @@ public class QuestLog : Photon.MonoBehaviour {
 				}
 				if(questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete == true)
 				{
-					ObjectiveComplete += 1;	
+					questCreator.Q_List[i].ObjectiveComplete += 1;	
 				}
-				if(ObjectiveComplete == questCreator.Q_List[i].Q_Objectives.Count)
+				if(questCreator.Q_List[i].ObjectiveComplete == questCreator.Q_List[i].Q_Objectives.Count)
 				{					
 					Debug.Log("The quest is now done..");
 					questCreator.Q_List[i].Q_Completed = true;
