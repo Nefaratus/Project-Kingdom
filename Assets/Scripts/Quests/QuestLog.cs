@@ -8,6 +8,7 @@ public class QuestLog : Photon.MonoBehaviour {
 	public GUIStyle buttonStyle;
 	QuestCreator questCreator;
 	int counter;
+	int ObjectiveComplete = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,41 @@ public class QuestLog : Photon.MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+		for (int i = questCreator.Q_List.Count - 1; i >= 0; i--)
+		{
+			for (int j = 0; j < questCreator.Q_List[i].Q_Objectives.Count; j++) 
+			{			
+				if(questCreator.Q_List[i].Q_Objectives[j].Tag == "Places")
+				{
+					if(questCreator.Q_List[i].Q_Objectives[j].ObjectiveName == gameObject.GetComponent<Destination>().destination)
+					{			
+						questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete = true;
+						Debug.Log(questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete);
+					}
+				}
+				if(questCreator.Q_List[i].Q_Objectives[j].Tag == "Player")
+				{
+					GameObject target = GameObject.Find(questCreator.Q_List[i].Q_Objectives[j].ObjectiveName);
+
+					if(target.GetComponent<PlayerStatus>().P_Health < 1)
+					{			
+						questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete = true;
+						Debug.Log(questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete);
+					}
+				}
+				if(questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete == true)
+				{
+					ObjectiveComplete += 1;	
+				}
+				if(ObjectiveComplete == questCreator.Q_List[i].Q_Objectives.Count)
+				{					
+					Debug.Log("The quest is now done..");
+					questCreator.Q_List[i].Q_Completed = true;
+				}
+			}
+		}
+					
 
 	}
 
@@ -52,13 +87,9 @@ public class QuestLog : Photon.MonoBehaviour {
 				{
 					
 					GUILayout.Label("Description: \n" + questCreator.Q_List[i].Q_Description + "\n");
-					GUILayout.Label("Destination: " + questCreator.Q_List[i].Q_Destination + "\n");
-					GUILayout.Label("Created by: " + questCreator.Q_List[i].Q_Author + "\n");
+					GUILayout.Label("Objective: " + questCreator.Q_List[i].Q_Objectives[0].GetObjectiveName() + "\n");
 
-					if(questCreator.Q_List[i].Q_Destination == gameObject.GetComponent<Destination>().destination)
-					{						
-						questCreator.Q_List[i].Q_Completed = true;
-					}
+					GUILayout.Label("Created by: " + questCreator.Q_List[i].Q_Author + "\n");
 
 					if(GUILayout.Button("Remove Quest"))
 					{	
@@ -69,13 +100,14 @@ public class QuestLog : Photon.MonoBehaviour {
 					{
 						if(questCreator.Q_List[i].Q_Completed == true)
 						{
+							Debug.Log("Removed");
 							photonView.RPC("RemoveQuest",PhotonTargets.All,i);
 								//Award Player etc..
 						}
 					}
 					else
 					{
-						Debug.Log ("Index to slow");
+						Debug.Log ("Index to low");
 					}
 					if(GUILayout.Button("Complete"))
 					{

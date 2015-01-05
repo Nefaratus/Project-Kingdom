@@ -6,11 +6,11 @@ public class QuestCreator : Photon.MonoBehaviour {
 
 	public string Q_Name, Q_Description;
 	public int Q_Objective,s_Type;
-	Quests N_Quest;
+	Quest N_Quest;
 	public bool showCreator;
-	GameObject[] places,players;
+	GameObject[] places,players,enemies,objectives;
 	int p = 0;	
-	public List<Quests> Q_List = new List<Quests>(); 
+	public List<Quest> Q_List = new List<Quest>(); 
 
 	float Border_width, Border_height, G_width, G_height;
 
@@ -21,7 +21,8 @@ public class QuestCreator : Photon.MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		players = GameObject.FindGameObjectsWithTag ("Player");
+		enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 		Border_width = Screen.width/3f;
 		Border_height = Screen.height / 4f;
 		G_width = Screen.width/3.5f;
@@ -42,40 +43,57 @@ public class QuestCreator : Photon.MonoBehaviour {
 
 			Q_Description = GUI.TextArea (new Rect (10, Border_height / 4.5f, G_width - 20, G_height / 2), Q_Description);
 
-			if(GUI.Button(new Rect(10,Border_height + Border_height /3,G_width /5,G_height / 15),"<-"))
+			if(GUI.Button(new Rect(10,Border_height + Border_height /3,G_width /5,G_height / 15),"Places"))
 			{
-				if(p > 0)
+				objectives = places;
+			}
+
+			if(GUI.Button(new Rect(Border_width / 2.9f,Border_height + Border_height /3,G_width /5,G_height / 15),"Players"))
+			{
+				objectives = players;
+			}
+
+			if(GUI.Button(new Rect(Border_width / 1.5f,Border_height + Border_height /3,G_width /5,G_height / 15),"Enemies"))
+			{
+				objectives = enemies;
+			}
+
+			if(objectives != null)
+			{
+				if(GUI.Button(new Rect(10,Border_height + Border_height /2,G_width /5,G_height / 15),"<-"))
 				{
-					p--;
+					if(p > 0)
+					{
+						p--;
+					}
+				}
+
+				GUI.Label(new Rect(Border_width / 2.9f,Border_height + Border_height /2 ,G_width /5,G_height / 15),"" + objectives[p].name,"box");
+
+				if(GUI.Button(new Rect(Border_width / 1.5f ,Border_height + Border_height /2,G_width /5,G_height / 15),"->"))
+				{
+					if(p < objectives.Length - 1)
+					{
+						p++;
+					}
+				}
+
+				if(GUI.Button (new Rect (Border_width / 3.5f,Border_height + Border_height /1.5f ,G_width /3,G_height / 10), "Set Quest"))
+				{
+					photonView.RPC("CreateQuest", PhotonTargets.AllBuffered, Q_Name,Q_Description,objectives[p].name,gameObject.name,1,objectives[p].tag);
 				}
 			}
-
-			GUI.Label(new Rect(Border_width / 3f,Border_height + Border_height /3 ,G_width /5,G_height / 15),"" + places[p].name,"box");
-
-			if(GUI.Button(new Rect(Border_width / 1.5f ,Border_height + Border_height /3,G_width /5,G_height / 15),"->"))
-			{
-				if(p < places.Length -1)
-				{
-					p++;
-				}
-			}
-
-			if(GUI.Button (new Rect (Border_width / 3.5f,Border_height + Border_height /1.5f ,G_width /3,G_height / 10), "Set Quest"))
-			{
-				photonView.RPC("CreateQuest", PhotonTargets.AllBuffered, Q_Name,Q_Description,places[p].name,gameObject.name);
-			}
-
 			GUI.EndGroup();
 
 		}
 	}
 		
-	public void AddQuest(string Q_name,string Q_Descr, string Q_desti,string Q_author)
+	public void AddQuest(string Q_name,string Q_descr, string Q_objec,string Q_author,int Q_amount,string tag)
 	{
-		N_Quest = new Quests();
+		N_Quest = new Quest();
 		N_Quest.Q_Name = Q_name;
-		N_Quest.Q_Description = Q_Descr;
-		N_Quest.Q_Destination = Q_desti;
+		N_Quest.Q_Description = Q_descr;
+		N_Quest.NewObjective(Q_objec,Q_amount,tag);
 		N_Quest.Q_Author = Q_author;
 		Q_List.Add(N_Quest);
 		Q_Name = "";
@@ -83,13 +101,13 @@ public class QuestCreator : Photon.MonoBehaviour {
 	}
 
 	[RPC]
-	void CreateQuest(string Q_name,string Q_Descr, string Q_desti,string Q_author, PhotonMessageInfo info)
+	void CreateQuest(string Q_name,string Q_descr, string Q_objec,string Q_author,int Q_amount,string tag, PhotonMessageInfo info)
 	{
 		players = GameObject.FindGameObjectsWithTag("Player");
 		foreach (GameObject player in players) 
 		{
 			//This is so that on every player with this script on it will invoke the method AddQuest
-			player.GetComponent<QuestCreator>().AddQuest(Q_name, Q_Descr, Q_desti,Q_author);
+			player.GetComponent<QuestCreator>().AddQuest(Q_name, Q_descr, Q_objec,Q_author,Q_amount,tag);
 		}
 	}
 
