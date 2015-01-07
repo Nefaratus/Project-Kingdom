@@ -30,8 +30,6 @@ public class QuestCreator : Photon.MonoBehaviour {
 
 	}
 
-
-
 	void OnGUI()
 	{
 		if(showCreator == true)

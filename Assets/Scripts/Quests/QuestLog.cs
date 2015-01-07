@@ -39,6 +39,16 @@ public class QuestLog : Photon.MonoBehaviour {
 						Debug.Log(questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete);
 					}
 				}
+				if(questCreator.Q_List[i].Q_Objectives[j].Tag == "Enemy")
+				{
+					GameObject target = GameObject.Find(questCreator.Q_List[i].Q_Objectives[j].ObjectiveName);
+					
+					if(target.GetComponent<EnemyStatus>().E_Health < 1)
+					{			
+						questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete = true;
+						Debug.Log(questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete);
+					}
+				}
 				if(questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete == true)
 				{
 					questCreator.Q_List[i].ObjectiveComplete += 1;	
