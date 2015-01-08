@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 22273a50b851e744084b5a0395bce8a8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: _prp_backside
+    100002: _prp_chimney
+    100004: _prp_doorway_01_frame
+    100006: _prp_doorway_01_frame_001
+    100008: _prp_doorway_01_stair
+    100010: _prp_doorway_01_stair_001
+    100012: _prp_doorway_01_stair_002
+    100014: _prp_frontside
+    100016: _prp_leftside
+    100018: _prp_pillars
+    100020: _prp_rightside
+    100022: _prp_roof
+    100024: _prp_sign_board
+    100026: _prp_sign_frame
+    100028: _prp_walls
+    100030: _prp_window
+    100032: //RootNode
+    400000: _prp_backside
+    400002: _prp_chimney
+    400004: _prp_doorway_01_frame
+    400006: _prp_doorway_01_frame_001
+    400008: _prp_doorway_01_stair
+    400010: _prp_doorway_01_stair_001
+    400012: _prp_doorway_01_stair_002
+    400014: _prp_frontside
+    400016: _prp_leftside
+    400018: _prp_pillars
+    400020: _prp_rightside
+    400022: _prp_roof
+    400024: _prp_sign_board
+    400026: _prp_sign_frame
+    400028: _prp_walls
+    400030: _prp_window
+    400032: //RootNode
+    2300000: _prp_backside
+    2300002: _prp_chimney
+    2300004: _prp_doorway_01_frame
+    2300006: _prp_doorway_01_frame_001
+    2300008: _prp_doorway_01_stair
+    2300010: _prp_doorway_01_stair_001
+    2300012: _prp_doorway_01_stair_002
+    2300014: _prp_frontside
+    2300016: _prp_leftside
+    2300018: _prp_pillars
+    2300020: _prp_rightside
+    2300022: _prp_roof
+    2300024: _prp_sign_board
+    2300026: _prp_sign_frame
+    2300028: _prp_walls
+    2300030: _prp_window
+    3300000: _prp_backside
+    3300002: _prp_chimney
+    3300004: _prp_doorway_01_frame
+    3300006: _prp_doorway_01_frame_001
+    3300008: _prp_doorway_01_stair
+    3300010: _prp_doorway_01_stair_001
+    3300012: _prp_doorway_01_stair_002
+    3300014: _prp_frontside
+    3300016: _prp_leftside
+    3300018: _prp_pillars
+    3300020: _prp_rightside
+    3300022: _prp_roof
+    3300024: _prp_sign_board
+    3300026: _prp_sign_frame
+    3300028: _prp_walls
+    3300030: _prp_window
+    4300000: _prp_doorway_01_stair_002
+    4300002: _prp_chimney
+    4300004: _prp_sign_board
+    4300006: _prp_sign_frame
+    4300008: _prp_window
+    4300010: _prp_doorway_01_frame_001
+    4300012: _prp_doorway_01_stair_001
+    4300014: _prp_doorway_01_stair
+    4300016: _prp_doorway_01_frame
+    4300018: _prp_roof
+    4300020: _prp_walls
+    4300022: _prp_pillars
+    4300024: _prp_frontside
+    4300026: _prp_leftside
+    4300028: _prp_rightside
+    4300030: _prp_backside
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

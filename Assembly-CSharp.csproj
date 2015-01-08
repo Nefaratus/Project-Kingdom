@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>F:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +91,7 @@
      <Compile Include="Assets\Imported\Photon Unity Networking\UtilityScripts\SupportLogger.cs" />
      <Compile Include="Assets\Imported\Photon Unity Networking\UtilityScripts\TestDontDestroyOnLoad.cs" />
      <Compile Include="Assets\Imported\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
+     <Compile Include="Assets\Scripts\Audio\AudioZoneControl.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\ThirdPerson.cs" />
      <Compile Include="Assets\Scripts\Character\Attributes.cs" />
@@ -129,6 +130,8 @@
      <Compile Include="Assets\Scripts\System\GameController.cs" />
      <Compile Include="Assets\Scripts\System\MainMenu.cs" />
      <Compile Include="Assets\Scripts\System\TagsManagement.cs" />
+     <Compile Include="Assets\Scripts\TransferInside.cs" />
+     <Compile Include="Assets\Scripts\TransferOutside.cs" />
      <Compile Include="Assets\Scripts\UI\ChatBox.cs" />
      <Compile Include="Assets\Scripts\UI\Console.cs" />
      <Compile Include="Assets\Scripts\UI\GeneralGUI.cs" />
@@ -145,10 +148,10 @@
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
      <None Include="Assets\Imported\Photon Unity Networking\changelog.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>D:/Projecten/New folder/Project-Kingdom/Assets/Imported/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/Project Kingdom/Project-Kingdom/Assets/Imported/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

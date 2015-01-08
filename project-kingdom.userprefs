@@ -1,14 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Quests\QuestLog.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TransferInside.cs">
     <Files>
-      <File FileName="Assets\Scripts\Quests\QuestLog.cs" Line="46" Column="45" />
+      <File FileName="Assets\Scripts\TransferInside.cs" Line="29" Column="84" />
+      <File FileName="Assets\Scripts\Quests\QuestLog.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Multiplayer\NetworkManager2.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Quests\Quest.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Quests\QuestObjectives.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Quests\QuestCreator.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Village\Destination.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\PlayerStatus.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TransferOutside.cs" Line="8" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
