@@ -5,12 +5,13 @@ public class Combat : Photon.MonoBehaviour {
 
 	public Targeting targeting;
 	private GameObject target;
-	private AudioSource punch;
+	private Audio punch;
 
 	// Use this for initialization
 	void Start () {
 		target =  targeting.target;
-		punch = (gameObject.GetComponentInChildren<AudioSource> ().clip.name == "OnePunch"? gameObject.GetComponentInChildren<AudioSource> () : null);
+		punch = GetComponentInChildren<Audio>();
+
 	}
 	/// <summary>
 	/// Strike this for the specified damage.
@@ -18,7 +19,7 @@ public class Combat : Photon.MonoBehaviour {
 	/// <returns><c>true</c>, damage was done, <c>false</c> if not damage was done.</returns>
 	/// <param name="damage">Damage done.</param>
 	public bool struck(int damage){
-		punch.Play ();
+		punch.PlayPunch ();
 		Debug.Log("Struck " + this.name + " for " + damage + " damage.");
 		//this.gameObject.GetComponent<PlayerStatus>().P_Health -= damage;
 		photonView.RPC("DealDamage",PhotonTargets.AllBuffered,damage);

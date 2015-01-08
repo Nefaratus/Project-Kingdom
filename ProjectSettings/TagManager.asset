@@ -6,6 +6,9 @@ TagManager:
   - Enemy
   - Start
   - Places
+  - Inside
+  - Outside
+  - AudioManager
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

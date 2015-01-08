@@ -6,6 +6,7 @@ public class TransferOutside : MonoBehaviour {
 	GameObject[] transferPoint;
 	GameObject target;
 	Vector3 offset = new Vector3(0,0,-3);
+	Vector3 rotation = new Vector3(0,180,0);
 	
 	// Use this for initialization
 	void Start () {
@@ -27,6 +28,7 @@ public class TransferOutside : MonoBehaviour {
 	void OnTriggerEnter(Collider col)
 	{
 		col.gameObject.transform.position = target.gameObject.transform.position + offset;
+		col.gameObject.transform.Rotate (rotation);
 	}
 	
 	void TeleportPlayer()

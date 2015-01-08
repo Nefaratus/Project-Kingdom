@@ -14,6 +14,7 @@ public class GeneralGUI : MonoBehaviour {
 	ChatBox C_Box;
 	public Vector3 Village1Cor, Village2Cor;
 	public string des;
+	public Audio audio;
 	// Use this for initialization
 	void Start () {
 		MasterVolume = 50;
@@ -24,6 +25,7 @@ public class GeneralGUI : MonoBehaviour {
 		Q_logUI = player.GetComponent<QuestLog> ();
 		Q_createUI = player.GetComponent<QuestCreator>();
 		C_Box = player.GetComponent<ChatBox> ();
+		audio = player.GetComponentInChildren<Audio> ();
 	}
 	
 	// Update is called once per frame
@@ -147,10 +149,12 @@ public class GeneralGUI : MonoBehaviour {
 			if(GUI.Button(new Rect(Screen.width/11 , Screen.height/4.7f, Screen.width / 12, Screen.height / 15),"Village 1"))
 			{
 				player.setPlayerPosition(Village1Cor.x,Village1Cor.y,Village1Cor.z);
+				audio.PlayTeleport();
 			}
 			if(GUI.Button(new Rect(Screen.width/11,Screen.height/3.5f, Screen.width / 12, Screen.height / 15), "Village 2"))
 			{
 				player.setPlayerPosition(Village2Cor.x,Village2Cor.y,Village2Cor.z);
+				audio.PlayTeleport();
 			}
 			if(GUI.Button(new Rect(Screen.width/11, Screen.height/2.8f, Screen.width / 12, Screen.height / 15),"Exit Game"))
 			{

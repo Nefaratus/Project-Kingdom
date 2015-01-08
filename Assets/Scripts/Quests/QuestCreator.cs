@@ -11,12 +11,14 @@ public class QuestCreator : Photon.MonoBehaviour {
 	GameObject[] places,players,enemies,objectives;
 	int p = 0;	
 	public List<Quest> Q_List = new List<Quest>(); 
+	public Audio audio;
 
 	float Border_width, Border_height, G_width, G_height;
 
 	// Use this for initialization
 	void Start () {
 		places = GameObject.FindGameObjectsWithTag ("Places");
+		audio = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<Audio> ();
 	}
 	
 	// Update is called once per frame
@@ -96,6 +98,7 @@ public class QuestCreator : Photon.MonoBehaviour {
 		Q_List.Add(N_Quest);
 		Q_Name = "";
 		Q_Description = "";
+		audio.PlayClosingBook ();
 	}
 
 	[RPC]

@@ -77,6 +77,8 @@ public class NetworkManager2 : MonoBehaviour {
 		myPlayer.GetComponent<Destination> ().enabled = true;
 		myPlayer.GetComponent<QuestCreator> ().enabled = true;
 		myPlayer.GetComponent<QuestLog> ().enabled = true;
+		myPlayer.GetComponent<AudioListener> ().enabled = true;
+		myPlayer.GetComponent<Combat> ().enabled = true;
 
 		myPlayer.transform.FindChild ("Player Camera").gameObject.SetActive (true);
 		myPlayer.transform.FindChild ("UI").gameObject.SetActive (true);

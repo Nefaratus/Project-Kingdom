@@ -386,7 +386,6 @@ GameObject:
   - 20: {fileID: 2000000}
   - 92: {fileID: 9200000}
   - 124: {fileID: 12400000}
-  - 81: {fileID: 8100000}
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Player Camera
@@ -479,6 +478,7 @@ GameObject:
   - 114: {fileID: 11400032}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400006}
+  - 81: {fileID: 8100000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1107,6 +1107,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400144}
+  - 82: {fileID: 8200000}
+  - 114: {fileID: 11400036}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: AudioManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -1511,6 +1528,7 @@ Transform:
   - {fileID: 400124}
   - {fileID: 400062}
   - {fileID: 400050}
+  - {fileID: 400144}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400062
@@ -2042,6 +2060,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400076}
   m_RootOrder: 0
+--- !u!4 &400144
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100144}
+  m_LocalRotation: {x: 0, y: -.99926734, z: 0, w: -.038274616}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400060}
+  m_RootOrder: 6
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -2131,8 +2161,66 @@ AudioListener:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100050}
+  m_GameObject: {fileID: 100060}
   m_Enabled: 1
+--- !u!82 &8200000
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100144}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 5
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!92 &9200000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -2216,6 +2304,7 @@ MonoBehaviour:
     y: 50
     width: 125
     height: 300
+  fileName: Character
   ps: {fileID: 0}
 --- !u!114 &11400008
 MonoBehaviour:
@@ -2242,6 +2331,7 @@ MonoBehaviour:
   HealthBarLength: 0
   playerName: 
   P_Transform: {fileID: 400060}
+  DeathSound: {fileID: 0}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2585,6 +2675,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0a911e89614c746ae7d50536a70c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13abcd1baa1c7f4580495b6373f9841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 0}
+  punch: {fileID: 8300000, guid: 0860678aadd76684b938a63dc7f1f3fa, type: 3}
+  death: {fileID: 8300000, guid: 916b7f7c1d483f04787eb9faa38ed273, type: 3}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

@@ -11,15 +11,15 @@ public class PlayerStatus : Photon.MonoBehaviour{
 	public string playerName;
 	bool possible = true;
 	public CharacterSettings cs;
-	public Transform P_Transform;
-
+	public Transform P_Transform;	
+	public Audio DeathSound;
 
 	void Start()
 	{
 		P_Health = 100;
 		P_MaxHealth = 100;
 		cs = new CharacterSettings();
-		Transform t;
+		DeathSound = GetComponentInChildren<Audio>();
 	}
 
 	void FixedUpdate()
@@ -29,6 +29,7 @@ public class PlayerStatus : Photon.MonoBehaviour{
 			//If Health == 0 then respawn the player and set his health back to max Health
 			if(P_Health == 0)
 			{
+				DeathSound.PlayDeath();
 				Respawn(x,y,z);
 				setHealth(100);
 				

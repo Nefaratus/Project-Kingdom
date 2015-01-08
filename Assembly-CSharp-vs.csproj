@@ -91,6 +91,7 @@
      <Compile Include="Assets\Imported\Photon Unity Networking\UtilityScripts\SupportLogger.cs" />
      <Compile Include="Assets\Imported\Photon Unity Networking\UtilityScripts\TestDontDestroyOnLoad.cs" />
      <Compile Include="Assets\Imported\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
+     <Compile Include="Assets\Scripts\Audio\Audio.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioZoneControl.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\ThirdPerson.cs" />

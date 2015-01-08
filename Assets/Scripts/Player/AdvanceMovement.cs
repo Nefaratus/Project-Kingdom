@@ -46,6 +46,9 @@ public class AdvanceMovement : MonoBehaviour {
 
 	private Animator anim;
 	private AnimatorStateInfo currentBaseState;
+
+	
+	private Audio audio;
 	
 	void Awake(){
 
@@ -53,6 +56,8 @@ public class AdvanceMovement : MonoBehaviour {
 		if (anim.layerCount == 2) {
 			anim.SetLayerWeight(1, 1);
 		}
+
+		audio = GetComponentInChildren<Audio>();
 
 		myTransform = transform;
 		charController = GetComponent<CharacterController>();
@@ -177,5 +182,6 @@ public class AdvanceMovement : MonoBehaviour {
 	}
 	public void JumpMe(){
 		jumping = true;
+
 	}
 }

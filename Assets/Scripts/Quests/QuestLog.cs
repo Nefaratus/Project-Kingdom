@@ -7,11 +7,13 @@ public class QuestLog : Photon.MonoBehaviour {
 	private Vector2 scrollPos = Vector2.zero;
 	public GUIStyle buttonStyle;
 	QuestCreator questCreator;
-	int counter;
+	int counter;	
+	public Audio audio;
 
 	// Use this for initialization
 	void Start () {
 		questCreator = GetComponent<QuestCreator> ();
+		audio = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<Audio> ();
 	}
 	
 	// Update is called once per frame
@@ -57,6 +59,7 @@ public class QuestLog : Photon.MonoBehaviour {
 				{					
 					Debug.Log("The quest is now done..");
 					questCreator.Q_List[i].Q_Completed = true;
+					audio.PlayDing();
 				}
 			}
 		}
