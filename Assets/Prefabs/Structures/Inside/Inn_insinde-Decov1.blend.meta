@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 22273a50b851e744084b5a0395bce8a8
+guid: d0152f41e7b95c445ae086c942e04470
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -18,8 +18,24 @@ ModelImporter:
     100024: _prp_sign_board
     100026: _prp_sign_frame
     100028: _prp_walls
-    100030: _prp_window
-    100032: //RootNode
+    100030: _prp_walls_001
+    100032: _prp_window
+    100034: Bench_003
+    100036: Bench_004
+    100038: Bench_005
+    100040: Bench_006
+    100042: Bench_007
+    100044: Bench_008
+    100046: Cube
+    100048: //RootNode
+    100050: Bar
+    100052: Piano
+    100054: Bench_000
+    100056: Bench_001
+    100058: Bench_002
+    100060: Bench_009
+    100062: Bench_010
+    100064: Bench_011
     400000: _prp_backside
     400002: _prp_chimney
     400004: _prp_doorway_01_frame
@@ -35,8 +51,24 @@ ModelImporter:
     400024: _prp_sign_board
     400026: _prp_sign_frame
     400028: _prp_walls
-    400030: _prp_window
-    400032: //RootNode
+    400030: _prp_walls_001
+    400032: _prp_window
+    400034: Bench_003
+    400036: Bench_004
+    400038: Bench_005
+    400040: Bench_006
+    400042: Bench_007
+    400044: Bench_008
+    400046: Cube
+    400048: //RootNode
+    400050: Bar
+    400052: Piano
+    400054: Bench_000
+    400056: Bench_001
+    400058: Bench_002
+    400060: Bench_009
+    400062: Bench_010
+    400064: Bench_011
     2300000: _prp_backside
     2300002: _prp_chimney
     2300004: _prp_doorway_01_frame
@@ -52,7 +84,23 @@ ModelImporter:
     2300024: _prp_sign_board
     2300026: _prp_sign_frame
     2300028: _prp_walls
-    2300030: _prp_window
+    2300030: _prp_walls_001
+    2300032: _prp_window
+    2300034: Bench_003
+    2300036: Bench_004
+    2300038: Bench_005
+    2300040: Bench_006
+    2300042: Bench_007
+    2300044: Bench_008
+    2300046: Cube
+    2300048: Bar
+    2300050: Piano
+    2300052: Bench_000
+    2300054: Bench_001
+    2300056: Bench_002
+    2300058: Bench_009
+    2300060: Bench_010
+    2300062: Bench_011
     3300000: _prp_backside
     3300002: _prp_chimney
     3300004: _prp_doorway_01_frame
@@ -68,23 +116,55 @@ ModelImporter:
     3300024: _prp_sign_board
     3300026: _prp_sign_frame
     3300028: _prp_walls
-    3300030: _prp_window
-    4300000: _prp_doorway_01_stair_002
-    4300002: _prp_chimney
-    4300004: _prp_sign_board
-    4300006: _prp_sign_frame
-    4300008: _prp_window
-    4300010: _prp_doorway_01_frame_001
-    4300012: _prp_doorway_01_stair_001
-    4300014: _prp_doorway_01_stair
-    4300016: _prp_doorway_01_frame
-    4300018: _prp_roof
-    4300020: _prp_walls
-    4300022: _prp_pillars
-    4300024: _prp_frontside
-    4300026: _prp_leftside
-    4300028: _prp_rightside
-    4300030: _prp_backside
+    3300030: _prp_walls_001
+    3300032: _prp_window
+    3300034: Bench_003
+    3300036: Bench_004
+    3300038: Bench_005
+    3300040: Bench_006
+    3300042: Bench_007
+    3300044: Bench_008
+    3300046: Cube
+    3300048: Bar
+    3300050: Piano
+    3300052: Bench_000
+    3300054: Bench_001
+    3300056: Bench_002
+    3300058: Bench_009
+    3300060: Bench_010
+    3300062: Bench_011
+    4300000: Bench_008
+    4300002: Bench_007
+    4300004: Bench_006
+    4300006: Bench_005
+    4300008: Bench_004
+    4300010: Bench_003
+    4300012: _prp_walls_001
+    4300014: _prp_doorway_01_stair_002
+    4300016: _prp_chimney
+    4300018: _prp_sign_board
+    4300020: _prp_sign_frame
+    4300022: _prp_window
+    4300024: _prp_doorway_01_frame_001
+    4300026: _prp_doorway_01_stair_001
+    4300028: _prp_doorway_01_stair
+    4300030: _prp_doorway_01_frame
+    4300032: _prp_roof
+    4300034: _prp_walls
+    4300036: _prp_pillars
+    4300038: _prp_frontside
+    4300040: _prp_leftside
+    4300042: _prp_rightside
+    4300044: _prp_backside
+    4300046: Cube
+    4300048: Bar
+    4300050: Piano
+    4300052: Bench_000
+    4300054: Bench_001
+    4300056: Bench_002
+    4300058: Bench_009
+    4300060: Bench_010
+    4300062: Bench_011
     7400000: Default Take
     9500000: //RootNode
   materials:
