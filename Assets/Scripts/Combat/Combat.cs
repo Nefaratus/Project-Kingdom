@@ -22,7 +22,7 @@ public class Combat : Photon.MonoBehaviour {
 		punch.PlayPunch ();
 		Debug.Log("Struck " + this.name + " for " + damage + " damage.");
 		//this.gameObject.GetComponent<PlayerStatus>().P_Health -= damage;
-		photonView.RPC("DealDamage",PhotonTargets.AllBuffered,damage);
+			photonView.RPC("DealDamage",PhotonTargets.AllBuffered,damage);
 		/* Damage code here */return false;/* << Remove that << */
 
 	}

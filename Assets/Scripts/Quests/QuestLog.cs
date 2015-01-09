@@ -45,7 +45,7 @@ public class QuestLog : Photon.MonoBehaviour {
 				{
 					GameObject target = GameObject.Find(questCreator.Q_List[i].Q_Objectives[j].ObjectiveName);
 					
-					if(target.GetComponent<EnemyStatus>().E_Health < 1)
+					if(target.GetComponent<PlayerStatus>().P_Health < 1)
 					{			
 						questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete = true;
 						Debug.Log(questCreator.Q_List[i].Q_Objectives[j].ObjectiveComplete);

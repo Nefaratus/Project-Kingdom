@@ -2332,6 +2332,7 @@ MonoBehaviour:
   playerName: 
   P_Transform: {fileID: 400060}
   DeathSound: {fileID: 0}
+  Enemy: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2696,7 +2697,7 @@ MonoBehaviour:
   teleport: {fileID: 8300000, guid: a5f7990493087804c80ddf76d52b634d, type: 3}
   ding: {fileID: 8300000, guid: a68580204c9ca7b4fb95f896cc8db94b, type: 3}
   book: {fileID: 8300000, guid: 54582fa5e8412464f80cd17ffd78734e, type: 3}
-  walking: 1
+  running: 1
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

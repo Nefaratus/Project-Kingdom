@@ -102,14 +102,12 @@
      <Compile Include="Assets\Scripts\CharacterCreation\DoneMenu.cs" />
      <Compile Include="Assets\Scripts\Combat\Combat.cs" />
      <Compile Include="Assets\Scripts\Combat\EnemyDamage.cs" />
-     <Compile Include="Assets\Scripts\Combat\PlayerDamage.cs" />
      <Compile Include="Assets\Scripts\Combat\PlayerTargeting.cs" />
      <Compile Include="Assets\Scripts\Combat\Targeting.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAnimation.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAnimatorSetup.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySight.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyStatus.cs" />
      <Compile Include="Assets\Scripts\Enemy\Patrol.cs" />
      <Compile Include="Assets\Scripts\Multiplayer\NetworkCharacter.cs" />
      <Compile Include="Assets\Scripts\Multiplayer\NetworkManager2.cs" />

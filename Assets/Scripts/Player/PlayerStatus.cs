@@ -13,6 +13,7 @@ public class PlayerStatus : Photon.MonoBehaviour{
 	public CharacterSettings cs;
 	public Transform P_Transform;	
 	public Audio DeathSound;
+	public bool Enemy = false;
 
 	void Start()
 	{
@@ -40,24 +41,26 @@ public class PlayerStatus : Photon.MonoBehaviour{
 
 	void OnGUI()
 	{
-		if(photonView.isMine)
+		if(!Enemy)
 		{
-			//GUI.backgroundColor = Color.red;
-			//Health Bar
-			GUI.Box(new Rect (10, 10, HealthBarLength, 20), P_Health + "/" + P_MaxHealth);
-
-
-			if(possible == true)
+			if(photonView.isMine)
 			{
-			playerName = GUI.TextField (new Rect (10, Screen.height / 2, Screen.width /12, 20), playerName, 15);
-			if(GUI.Button(new Rect (10, Screen.height / 2 + 20, Screen.width /12, 20),"Set Name"))
-			{				
-				photonView.RPC("SetName", PhotonTargets.AllBuffered, playerName);
-					possible = false;
-			}
-			}
+				//GUI.backgroundColor = Color.red;
+				//Health Bar
+				GUI.Box(new Rect (10, 10, HealthBarLength, 20), P_Health + "/" + P_MaxHealth);
 
-		}
+
+				if(possible == true)
+				{
+				playerName = GUI.TextField (new Rect (10, Screen.height / 2, Screen.width /12, 20), playerName, 15);
+				if(GUI.Button(new Rect (10, Screen.height / 2 + 20, Screen.width /12, 20),"Set Name"))
+				{				
+					photonView.RPC("SetName", PhotonTargets.AllBuffered, playerName);
+						possible = false;
+				}
+				}
+
+			}}
 
 	}
 		
