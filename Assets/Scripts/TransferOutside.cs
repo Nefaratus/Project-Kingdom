@@ -7,32 +7,45 @@ public class TransferOutside : MonoBehaviour {
 	GameObject target;
 	Vector3 offset = new Vector3(0,0,-3);
 	Vector3 rotation = new Vector3(0,180,0);
+	GameObject Player;
+	bool showPoints;
 	
 	// Use this for initialization
-	void Start () {
-		transferPoint = GameObject.FindGameObjectsWithTag ("Outside");
-		
+	void Start () 
+	{
+		Player = GameObject.FindGameObjectWithTag ("Player"); 
+		transferPoint = GameObject.FindGameObjectsWithTag ("Outside");			
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		foreach (GameObject house in transferPoint) {
-			if(gameObject.name == house.gameObject.name)
-			{
-				target = house;
-			}
-		}
-		
+	void ShowPoints()
+	{
+		showPoints = !showPoints;
 	}
-	
+		
 	void OnTriggerEnter(Collider col)
 	{
-		col.gameObject.transform.position = target.gameObject.transform.position + offset;
-		col.gameObject.transform.Rotate (rotation);
+		Player = col.gameObject;
+		showPoints = true;
 	}
-	
-	void TeleportPlayer()
+
+	void OnTriggerExit(Collider col)
+	{		
+		showPoints = false;
+	}
+	void OnGUI()
 	{
-		
+		if(showPoints)
+		{
+			GUI.BeginGroup (new Rect (Screen.width/10,Screen.height/2,100,50), "");
+			foreach (GameObject point in transferPoint) 
+			{		
+				if(GUILayout.Button(point.transform.root.gameObject.name))
+				{
+					Player.transform.position = point.transform.position + offset;
+					Player.transform.Rotate (rotation);
+				}
+			}
+			GUI.EndGroup();
+		}
 	}
 }
