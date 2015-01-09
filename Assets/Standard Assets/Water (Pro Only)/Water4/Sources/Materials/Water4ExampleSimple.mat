@@ -100,6 +100,10 @@ Material:
         first:
           name: _NormalsDisplacement
         second: 72.7272797
+      data:
+        first:
+          name: _GerstnerIntensity
+        second: 1
     m_Colors:
       data:
         first:
@@ -124,7 +128,7 @@ Material:
       data:
         first:
           name: _BumpTiling
-        second: {r: .0399999991, g: .0399999991, b: .0399999991, a: .0799999982}
+        second: {r: .636099994, g: .0399999991, b: .0399999991, a: .0799999982}
       data:
         first:
           name: _BumpDirection
