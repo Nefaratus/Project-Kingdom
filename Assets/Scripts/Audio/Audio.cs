@@ -14,7 +14,7 @@ public class Audio : MonoBehaviour {
 
 	public void IsRunning()
 	{
-		if(running == true)
+		if(running)
 		{
 			source.clip = walk;
 			source.Play ();
@@ -25,9 +25,12 @@ public class Audio : MonoBehaviour {
 
 	public void stopRunning()
 	{
-		source.Stop ();
-		source.clip = null;
-		running = true;
+		if(!running)
+		{
+			source.Stop ();
+			source.clip = null;
+			running = true;
+		}
 	}
 
 	public void PlayDeath()

@@ -958,8 +958,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.1112518, y: -149.742004, z: 61.0090141}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.15556264, y: .0423995964, z: 3.0504508}
+  m_LocalScale: {x: .0500000007, y: .0500000007, z: .0500000007}
   m_Children:
   - {fileID: 400058}
   - {fileID: 400056}
@@ -1014,7 +1014,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.17000008, y: .460000008, z: -5.38999987}
+  m_LocalPosition: {x: 6.98999977, y: -.216999993, z: -3.09800005}
   m_LocalScale: {x: 1, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 400062}
@@ -2243,7 +2243,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 20, z: 30}
+  m_Size: {x: 27, y: 20, z: 40}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &8200000
 AudioSource:
@@ -2261,8 +2261,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 14.8514853
-  MaxDistance: 15
+  MinDistance: 7
+  MaxDistance: 22
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
