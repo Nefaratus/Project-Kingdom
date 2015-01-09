@@ -2162,7 +2162,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100060}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2172,10 +2172,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -2435,6 +2435,7 @@ MonoBehaviour:
   Village1Cor: {x: -260.179993, y: 9.38000011, z: 162.570007}
   Village2Cor: {x: 268.929993, y: 3.80999994, z: -87.2600021}
   des: 
+  audio: {fileID: 0}
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2580,6 +2581,7 @@ MonoBehaviour:
   Q_Objective: 0
   s_Type: 0
   showCreator: 0
+  audio: {fileID: 0}
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2652,13 +2654,14 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  audio: {fileID: 0}
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100060}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b0217b842aadcb409d41553bf0b93c2, type: 3}
   m_Name: 
@@ -2689,6 +2692,11 @@ MonoBehaviour:
   source: {fileID: 0}
   punch: {fileID: 8300000, guid: 0860678aadd76684b938a63dc7f1f3fa, type: 3}
   death: {fileID: 8300000, guid: 916b7f7c1d483f04787eb9faa38ed273, type: 3}
+  walk: {fileID: 8300000, guid: fc794b1b20ab7a34999e07740eeee132, type: 3}
+  teleport: {fileID: 8300000, guid: a5f7990493087804c80ddf76d52b634d, type: 3}
+  ding: {fileID: 8300000, guid: a68580204c9ca7b4fb95f896cc8db94b, type: 3}
+  book: {fileID: 8300000, guid: 54582fa5e8412464f80cd17ffd78734e, type: 3}
+  walking: 1
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

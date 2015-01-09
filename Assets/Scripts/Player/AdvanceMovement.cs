@@ -137,7 +137,7 @@ public class AdvanceMovement : MonoBehaviour {
 			if(forward != AdvanceMovement.Forward.none){
 				if(running){
 					moveDirection *= runSpeed;
-					// Code voor run animatie
+					audio.IsRunning();
 				}
 				else{
 					//Code voor walk animatie
@@ -146,7 +146,8 @@ public class AdvanceMovement : MonoBehaviour {
 			else if(strafing != AdvanceMovement.Turn.none){
 				//Code voor strafe animatie
 			}
-			else{
+			else{				
+				audio.stopRunning();
 				//Code voor Idle animatie
 			}
 			if(jumping){

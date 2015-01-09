@@ -5,16 +5,29 @@ public class Audio : MonoBehaviour {
 
 	public AudioSource source;
 	public AudioClip punch,death,walk,teleport,ding,book;
+	public bool running = true;
 
 	void Start()
 	{
 		source = GetComponent<AudioSource> ();
 	}
 
-	public void IsWalking()
+	public void IsRunning()
 	{
-		source.clip = walk;
-		source.Play ();			
+		if(running == true)
+		{
+			source.clip = walk;
+			source.Play ();
+			running = false;
+		}
+
+	}
+
+	public void stopRunning()
+	{
+		source.Stop ();
+		source.clip = null;
+		running = true;
 	}
 
 	public void PlayDeath()
