@@ -1,20 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\AdvanceMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Combat\PlayerTargeting.cs">
     <Files>
       <File FileName="Assets\Scripts\TransferInside.cs" Line="8" Column="39" />
       <File FileName="Assets\Scripts\Quests\QuestLog.cs" Line="62" Column="23" />
       <File FileName="Assets\Scripts\Multiplayer\NetworkManager2.cs" Line="84" Column="67" />
       <File FileName="Assets\Scripts\Quests\Quest.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Quests\QuestObjectives.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Quests\QuestCreator.cs" Line="101" Column="28" />
+      <File FileName="Assets\Scripts\Quests\QuestCreator.cs" Line="16" Column="2" />
       <File FileName="Assets\Scripts\Village\Destination.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\PlayerStatus.cs" Line="37" Column="3" />
       <File FileName="Assets\Scripts\Combat\Combat.cs" Line="13" Column="9" />
-      <File FileName="Assets\Scripts\UI\GeneralGUI.cs" Line="27" Column="43" />
-      <File FileName="Assets\Scripts\Audio\Audio.cs" Line="30" Column="18" />
-      <File FileName="Assets\Scripts\Player\AdvanceMovement.cs" Line="72" Column="55" />
-      <File FileName="Assets\Scripts\TransferOutside.cs" Line="9" Column="42" />
+      <File FileName="Assets\Scripts\UI\GeneralGUI.cs" Line="165" Column="4" />
+      <File FileName="Assets\Scripts\Audio\Audio.cs" Line="28" Column="14" />
+      <File FileName="Assets\Scripts\Player\AdvanceMovement.cs" Line="150" Column="1" />
+      <File FileName="Assets\Scripts\Village\Collide.cs" Line="18" Column="1" />
+      <File FileName="Assets\Scripts\Combat\PlayerTargeting.cs" Line="25" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

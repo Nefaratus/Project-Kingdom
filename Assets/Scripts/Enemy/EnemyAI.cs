@@ -28,9 +28,12 @@ public class EnemyAI : MonoBehaviour {
 	private bool alive = true;
 	private SphereCollider sphereCol;
 
+	private Animator anim;
+
 	void Start(){
 		statement = EnemyAI.State.Init;
-		StartCoroutine ("FSM");
+		StartCoroutine ("FSM");		
+		anim = GetComponent<Animator>();
 	}
 
 	private IEnumerator FSM(){
@@ -61,7 +64,7 @@ public class EnemyAI : MonoBehaviour {
 
 	private void Init(){
 		myTransform = transform;
-		home = transform.parent.transform;
+//		home = transform.parent.transform;
 		sphereCol = GetComponent<SphereCollider>();
 		
 		if(sphereCol == null){
@@ -140,6 +143,7 @@ public class EnemyAI : MonoBehaviour {
 			target = other.transform;
 			alive = true;
 			StartCoroutine("FSM");
+			anim.SetBool("Follow",true);
 		}
 	}
 
