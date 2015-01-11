@@ -5187,7 +5187,7 @@ GameObject:
   - 4: {fileID: 400690}
   - 137: {fileID: 13700000}
   m_Layer: 0
-  m_Name: Sphere_001
+  m_Name: Right_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5203,7 +5203,7 @@ GameObject:
   - 4: {fileID: 400692}
   - 137: {fileID: 13700002}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Left_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5234,7 +5234,7 @@ GameObject:
   - 4: {fileID: 400696}
   - 137: {fileID: 13700004}
   m_Layer: 0
-  m_Name: RetopoGroup2
+  m_Name: Cloths
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5250,7 +5250,7 @@ GameObject:
   - 4: {fileID: 400698}
   - 137: {fileID: 13700006}
   m_Layer: 0
-  m_Name: RetopoGroup1_006
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9828,8 +9828,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -249.343399, y: 5.10895538, z: 344.693054}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -236.639999, y: 1.73300004, z: 314.600006}
+  m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children:
   - {fileID: 400698}
   - {fileID: 400696}
@@ -9954,7 +9954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d50c8d97cdf17954886e28b62a8235d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perceptionRadius: 5
+  perceptionRadius: 10
   meleeRange: 1
   target: {fileID: 400060, guid: 44f955e23a60a9f4786b59ad1eebcef5, type: 2}
 --- !u!114 &11400006
@@ -9984,10 +9984,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100700}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 10
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:

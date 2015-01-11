@@ -15,9 +15,11 @@ public class EnemyAI : MonoBehaviour {
 		Flee
 	}
 
-	public float perceptionRadius = 5f;
-	public float meleeRange = 1f;
+	public float perceptionRadius = 20f;
+
+	public float meleeRange = 5f;
 	public Transform target;
+	public bool combat;
 	private Transform myTransform;
 
 	private const float rotationDamp = 0.03f;
@@ -25,7 +27,7 @@ public class EnemyAI : MonoBehaviour {
 
 	private Transform home;
 	private State statement;
-	private bool alive = true;
+	private bool targetAlive = true;
 	private SphereCollider sphereCol;
 
 	private Animator anim;
@@ -37,7 +39,7 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	private IEnumerator FSM(){
-		while(alive){
+		while(targetAlive){
 			switch(statement){
 			case State.Init:
 				Init ();
@@ -54,9 +56,6 @@ public class EnemyAI : MonoBehaviour {
 			case State.Retreat:
 				Retreat ();
 				break;
-			case State.Flee:
-				Flee ();
-				break;
 			}
 			yield return null;
 		}
@@ -70,6 +69,7 @@ public class EnemyAI : MonoBehaviour {
 		if(sphereCol == null){
 			Debug.LogError("No Sphere Collider!!");
 		}
+
 		statement = EnemyAI.State.Setup;
 	}
 
@@ -78,32 +78,38 @@ public class EnemyAI : MonoBehaviour {
 		sphereCol.radius = perceptionRadius;
 		sphereCol.isTrigger = true;
 		statement = EnemyAI.State.Search;
-		alive = false;
+		targetAlive = false;
 	}
 
 	private void Search(){
-
+		anim.SetBool("Battle", false);
 		Movement ();
+		anim.SetBool("Follow",true);
+		myTransform.LookAt (target);
+
 		statement = EnemyAI.State.Action;
 	}
 
 	private void Action(){
 
-		Movement ();
+		anim.SetBool ("Follow", false);
+		Debug.Log ("Fight");
+		anim.SetBool ("Battle", true);
+
 		statement = EnemyAI.State.Retreat;
-	}
 
+
+		//targetAlive = true;
+	}
+	/// <summary>
+	/// Volgt de speler binnen het spel.
+	/// </summary>
 	private void Retreat(){
-		myTransform.LookAt (target); // moet nog gefixed worden
-		Movement ();
+		 // moet nog gefixed worden
+		//Movement ();
 		statement = EnemyAI.State.Search;
 	}
 
-	private void Flee(){
-
-		Movement ();
-		statement = EnemyAI.State.Search;
-	}
 
 
 	private void Movement(){
@@ -141,15 +147,16 @@ public class EnemyAI : MonoBehaviour {
 	public void OnTriggerEnter(Collider other){
 		if(other.CompareTag ("Player")){
 			target = other.transform;
-			alive = true;
+			targetAlive = true;
+			//anim.SetBool("Follow",true);
 			StartCoroutine("FSM");
-			anim.SetBool("Follow",true);
 		}
 	}
 
 	public void OnTriggerExit(Collider other){
 		if(other.CompareTag ("Player")){
 			target = home;
+			//anim.SetBool("Follow",false);
 		}
 	}
 }
