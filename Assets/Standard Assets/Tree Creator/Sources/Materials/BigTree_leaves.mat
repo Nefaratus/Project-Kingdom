@@ -41,6 +41,13 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ShadowOffset
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -49,7 +56,7 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .078125
+        second: .0602096058
       data:
         first:
           name: _SquashAmount
