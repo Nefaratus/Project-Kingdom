@@ -12,7 +12,6 @@ public class EnemyAI : MonoBehaviour {
 		Setup,
 		Action,
 		Retreat,
-		Flee
 	}
 
 	public float perceptionRadius = 20f;
@@ -79,30 +78,27 @@ public class EnemyAI : MonoBehaviour {
 		sphereCol.isTrigger = true;
 		statement = EnemyAI.State.Search;
 		targetAlive = false;
+
 	}
 
 	private void Search(){
-		anim.SetBool("Battle", false);
+		//anim.SetBool("Battle", false);
 		Movement ();
-		anim.SetBool("Follow",true);
-		myTransform.LookAt (target);
 
+		myTransform.LookAt (target);
+		anim.SetBool ("Follow", true);
+		anim.SetBool ("Battle", false);
 		statement = EnemyAI.State.Action;
 	}
 
 	private void Action(){
-
-		anim.SetBool ("Follow", false);
 		Debug.Log ("Fight");
-		anim.SetBool ("Battle", true);
-
-		statement = EnemyAI.State.Retreat;
-
-
-		//targetAlive = true;
+		anim.SetBool ("Follow", false);
+		anim.SetBool ("Battle", true);	
+		statement = EnemyAI.State.Search;
 	}
 	/// <summary>
-	/// Volgt de speler binnen het spel.
+	/// Volgt de speler binnend het spel.
 	/// </summary>
 	private void Retreat(){
 		 // moet nog gefixed worden
@@ -121,9 +117,11 @@ public class EnemyAI : MonoBehaviour {
 			
 			if (direction > forwardDamp && dist > meleeRange){
 				SendMessage("MoveMeForward", AdvanceMovement.Forward.forward);
+
 			}
 			else{
 				SendMessage("MoveMeForward", AdvanceMovement.Forward.none);
+
 			}
 			dir = (target.position - myTransform.position).normalized;
 			direction = Vector3.Dot (dir, transform.right);
@@ -148,7 +146,6 @@ public class EnemyAI : MonoBehaviour {
 		if(other.CompareTag ("Player")){
 			target = other.transform;
 			targetAlive = true;
-			//anim.SetBool("Follow",true);
 			StartCoroutine("FSM");
 		}
 	}
@@ -156,7 +153,7 @@ public class EnemyAI : MonoBehaviour {
 	public void OnTriggerExit(Collider other){
 		if(other.CompareTag ("Player")){
 			target = home;
-			//anim.SetBool("Follow",false);
+
 		}
 	}
 }

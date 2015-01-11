@@ -10,10 +10,12 @@ public class PlayerInput : MonoBehaviour {
 	private Vector3 syncStartPosition = Vector3.zero;
 	private Vector3 syncEndPosition = Vector3.zero;
 	private Combat combat;
-	
+
+	private Animator anim;
 	// Use this for initialization
 	void Start () {
 		this.combat = this.gameObject.GetComponent<Combat> ();
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -60,6 +62,11 @@ public class PlayerInput : MonoBehaviour {
 						if(Input.GetMouseButtonUp(1))
 						{
 							combat.strike(combat.targeting.target.gameObject,10,5);
+							anim.SetBool("Battle", true);
+						}
+						else
+						{
+							anim.SetBool("Battle", false);
 						}
 			}
 			else {

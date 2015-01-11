@@ -120,7 +120,7 @@ public class AdvanceMovement : MonoBehaviour {
 
 		if(charController.isGrounded){
 			airTime = 0;
-			
+
 			float v = Input.GetAxis("Move Forward/Backward");
 			anim.SetFloat("Speed", v);
 			

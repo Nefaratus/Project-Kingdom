@@ -479,6 +479,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400006}
   - 81: {fileID: 8100000}
+  - 111: {fileID: 11100000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2243,6 +2244,20 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &11100000
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100060}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400016, guid: 2de911d45fd8d124c90453569b0194ca, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
