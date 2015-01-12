@@ -36,7 +36,7 @@ public class TransferOutside : MonoBehaviour {
 	{
 		if(showPoints)
 		{
-			GUI.BeginGroup (new Rect (Screen.width/10,Screen.height/2,100,50), "");
+			GUI.BeginGroup (new Rect (Screen.width/2,Screen.height/2,Screen.width/10,Screen.width/10), "");
 			foreach (GameObject point in transferPoint) 
 			{		
 				if(GUILayout.Button(point.transform.root.gameObject.name))
