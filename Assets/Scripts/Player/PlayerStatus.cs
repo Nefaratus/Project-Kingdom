@@ -28,7 +28,8 @@ public class PlayerStatus : Photon.MonoBehaviour{
 		HealthChange(0);
 
 			//If Health == 0 then respawn the player and set his health back to max Health
-			if(P_Health == 0)
+			
+			if(P_Health == 0 && !Enemy)
 			{
 				DeathSound.PlayDeath();
 				Respawn(x,y,z);
