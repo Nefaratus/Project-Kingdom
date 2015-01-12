@@ -9,7 +9,7 @@ public class Combat : Photon.MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//target =  targeting.target;
+		target =  targeting.target;
 		punch = GetComponentInChildren<Audio>();
 
 	}
