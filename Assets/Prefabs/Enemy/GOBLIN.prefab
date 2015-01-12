@@ -5272,7 +5272,7 @@ GameObject:
   - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: GOBLIN
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9827,9 +9827,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100700}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -236.639999, y: 1.73300004, z: 314.600006}
-  m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
+  m_LocalRotation: {x: 0, y: -.617908835, z: 0, w: .786249816}
+  m_LocalPosition: {x: 301.089996, y: .150000006, z: -120.699997}
+  m_LocalScale: {x: .800000072, y: .800000012, z: .799999952}
   m_Children:
   - {fileID: 400698}
   - {fileID: 400696}
@@ -9954,9 +9954,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d50c8d97cdf17954886e28b62a8235d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perceptionRadius: 10
+  perceptionRadius: 5
   meleeRange: 1
   target: {fileID: 400060, guid: 44f955e23a60a9f4786b59ad1eebcef5, type: 2}
+  combat: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9987,7 +9988,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 5
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
@@ -10478,7 +10479,7 @@ CharacterController:
   m_StepOffset: .300000012
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: .800000012, z: 0}
+  m_Center: {x: 0, y: .980000019, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
