@@ -5270,6 +5270,9 @@ GameObject:
   - 135: {fileID: 13500000}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400008}
+  - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: GOBLIN
   m_TagString: Enemy
@@ -9978,6 +9981,65 @@ MonoBehaviour:
   fallTime: .5
   jumpHeight: 12
   jumpTime: .5
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subId: 0
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  observed: {fileID: 0}
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  instantiationId: 0
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0217b842aadcb409d41553bf0b93c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targeting: {fileID: 0}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8539c19c549f49c4688352f3a17a262d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  P_Level: 0
+  P_Health: 0
+  P_MaxHealth: 0
+  P_Mana: 0
+  P_MaxMana: 0
+  P_Stamina: 0
+  P_MaxStamina: 0
+  P_Experience: 0
+  x: 0
+  y: 0
+  z: 0
+  HealthBarLength: 0
+  playerName: 
+  P_Transform: {fileID: 0}
+  DeathSound: {fileID: 0}
+  Enemy: 1
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

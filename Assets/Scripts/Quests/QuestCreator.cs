@@ -68,7 +68,7 @@ public class QuestCreator : Photon.MonoBehaviour {
 					}
 				}
 
-				GUI.Label(new Rect(Border_width / 2.9f,Border_height + Border_height /2 ,G_width /5,G_height / 15),"" + objectives[p].name,"box");
+				GUI.Label(new Rect(Border_width /4.5f,Border_height + Border_height /2 ,G_width /2,G_height / 15),"" + objectives[p].name,"box");
 
 				if(GUI.Button(new Rect(Border_width / 1.5f ,Border_height + Border_height /2,G_width /5,G_height / 15),"->"))
 				{
