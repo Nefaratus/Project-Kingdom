@@ -29,7 +29,7 @@ public class SaveLoadUI : MonoBehaviour {
 	}
 	
 	void OnGUI()
-	{  
+	{  /*
 		if(GUI.Button(new Rect((dropDownRect.x - 100), dropDownRect.y, dropDownRect.width, 25), ""))
 		{
 			if(!show)
@@ -41,7 +41,7 @@ public class SaveLoadUI : MonoBehaviour {
 				show = false;
 			}
 		}
-		
+
 		if(show)
 		{
 			scrollViewVector = GUI.BeginScrollView(new Rect((dropDownRect.x - 100), (dropDownRect.y + 25), dropDownRect.width, dropDownRect.height),scrollViewVector,new Rect(0, 0, dropDownRect.width, Mathf.Max(dropDownRect.height, (list.Length*25))));
@@ -66,6 +66,6 @@ public class SaveLoadUI : MonoBehaviour {
 		else
 		{
 			GUI.Label(new Rect((dropDownRect.x - 95), dropDownRect.y, 300, 25), list[indexNumber]);
-		}
+		}*/
 	}
 }

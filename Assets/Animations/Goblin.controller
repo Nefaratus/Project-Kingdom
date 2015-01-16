@@ -147,6 +147,10 @@ Transition:
     m_ConditionEvent: Walk
     m_EventTreshold: 0
     m_ExitTime: .75
+  - m_ConditionMode: 1
+    m_ConditionEvent: Battle
+    m_EventTreshold: 0
+    m_ExitTime: .75
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -223,8 +227,8 @@ Transition:
   m_TransitionDuration: .25
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Follow
+  - m_ConditionMode: 2
+    m_ConditionEvent: Battle
     m_EventTreshold: 0
     m_ExitTime: .75
   m_Atomic: 1
@@ -354,10 +358,6 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110275070}
-      second:
-      - {fileID: 110102868}
-    data:
       first: {fileID: 110216436}
       second:
       - {fileID: 110100000}
@@ -376,6 +376,10 @@ StateMachine:
       first: {fileID: 110260001}
       second:
       - {fileID: 110157378}
+    data:
+      first: {fileID: 110275070}
+      second:
+      - {fileID: 110102868}
     data:
       first: {fileID: 110295504}
       second: []

@@ -127,6 +127,7 @@
      <Compile Include="Assets\Scripts\Combat\EnemyDamage.cs" />
      <Compile Include="Assets\Scripts\Combat\PlayerTargeting.cs" />
      <Compile Include="Assets\Scripts\Combat\Targeting.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ActivateEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemypatrol.cs" />
      <Compile Include="Assets\Scripts\Multiplayer\NetworkCharacter.cs" />
@@ -149,14 +150,14 @@
      <Compile Include="Assets\Scripts\System\GameController.cs" />
      <Compile Include="Assets\Scripts\System\MainMenu.cs" />
      <Compile Include="Assets\Scripts\System\TagsManagement.cs" />
-     <Compile Include="Assets\Scripts\TransferInside.cs" />
-     <Compile Include="Assets\Scripts\TransferOutside.cs" />
      <Compile Include="Assets\Scripts\UI\ChatBox.cs" />
      <Compile Include="Assets\Scripts\UI\Console.cs" />
      <Compile Include="Assets\Scripts\UI\GeneralGUI.cs" />
      <Compile Include="Assets\Scripts\UI\WorldClock.cs" />
      <Compile Include="Assets\Scripts\Village\Collide.cs" />
      <Compile Include="Assets\Scripts\Village\Destination.cs" />
+     <Compile Include="Assets\Scripts\Village\TransferInside.cs" />
+     <Compile Include="Assets\Scripts\Village\TransferOutside.cs" />
      <Compile Include="Assets\TerrainNeighbors.cs" />
      <None Include="Assets\Terrain\TerrainStitcher\Changelog.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />

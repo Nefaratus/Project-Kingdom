@@ -6,7 +6,6 @@ public class GeneralGUI : MonoBehaviour {
 
 	public GameObject target;
 	PlayerStatus player;
-	public int x,y,z;
 	bool menu,options,multiplayer,video = false;
 	private int MasterVolume,Music,Sound;
 	QuestLog Q_logUI;
@@ -136,7 +135,7 @@ public class GeneralGUI : MonoBehaviour {
 			//Respawn button
 			if (GUI.Button (new Rect (1, Screen.height/4.7f,  Screen.width / 12, Screen.height / 15), "Respawn")) 
 			{
-				player.Respawn (x, y, z);
+				player.Respawn ();
 			}
 			if(GUI.Button(new Rect (1 ,Screen.height/3.5f, Screen.width / 12, Screen.height / 15),"Death"))	
 			{
@@ -198,8 +197,8 @@ public class GeneralGUI : MonoBehaviour {
 
 		
 		des = gameObject.GetComponentInParent<Destination> ().destination;
-		GUI.Label (new Rect (Screen.width - Screen.width/7.5f, Screen.height - Screen.height + 5, 
-		                     Screen.width/10, Screen.height/30), des == null ? "Location : Somewhere" : "Location : " + des );
+		GUI.Label (new Rect (Screen.width - Screen.width/8f, Screen.height - Screen.height + 5, 
+		                     Screen.width/10, Screen.height/25), des == null ? "Location : Somewhere" : "Location : " + des );
 
 
 

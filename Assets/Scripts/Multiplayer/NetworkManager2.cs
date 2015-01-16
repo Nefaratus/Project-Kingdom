@@ -63,7 +63,7 @@ public class NetworkManager2 : MonoBehaviour {
 
 	void SpawnPlayer()
 	{
-		GameObject myPlayer = (GameObject)PhotonNetwork.Instantiate ("Player", //PlayerPrefab
+		GameObject myPlayer = (GameObject)PhotonNetwork.Instantiate ("Player1", //PlayerPrefab
 		                                                             new Vector3 (-256.9889f,10f,353.546f), //Position
 											                         Quaternion.identity, //Rotation
 											                         0);

@@ -14,6 +14,7 @@ public class PlayerStatus : Photon.MonoBehaviour{
 	public Transform P_Transform;	
 	public Audio DeathSound;
 	public bool Enemy = false;
+	Vector3 startPos;
 
 	void Start()
 	{
@@ -21,6 +22,7 @@ public class PlayerStatus : Photon.MonoBehaviour{
 		P_MaxHealth = 100;
 		cs = new CharacterSettings();
 		DeathSound = GetComponentInChildren<Audio>();
+		startPos = gameObject.transform.position;
 	}
 
 	void FixedUpdate()
@@ -29,10 +31,10 @@ public class PlayerStatus : Photon.MonoBehaviour{
 
 			//If Health == 0 then respawn the player and set his health back to max Health
 			
-			if(P_Health == 0 && !Enemy)
+			if(P_Health == 0)
 			{
 				DeathSound.PlayDeath();
-				Respawn(x,y,z);
+				Respawn();
 				setHealth(100);
 				
 			}
@@ -161,11 +163,10 @@ public class PlayerStatus : Photon.MonoBehaviour{
 		}
 	}
 
-	public void Respawn(float x,float y, float z)
+	public void Respawn()
 	{
-
-		setPlayerPosition (x, y, z);
-		setHealth (P_MaxHealth);
+			gameObject.transform.position = startPos;
+			setHealth (P_MaxHealth);
 
 	}
 

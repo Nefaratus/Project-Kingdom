@@ -24,10 +24,12 @@ public class EnemyAI : MonoBehaviour {
 	private const float rotationDamp = 0.03f;
 	private const float forwardDamp = 0.9f;
 
-	private Transform home;
+	private GameObject home;
 	private State statement;
 	private bool targetAlive = true;
 	private SphereCollider sphereCol;
+
+	private Vector3 startpos;
 
 	private Animator anim;
 
@@ -35,6 +37,8 @@ public class EnemyAI : MonoBehaviour {
 		statement = EnemyAI.State.Init;
 		StartCoroutine ("FSM");		
 		anim = GetComponent<Animator>();
+		startpos = gameObject.transform.position;
+		home = GameObject.FindGameObjectWithTag ("home");
 	}
 
 	private IEnumerator FSM(){
@@ -82,12 +86,14 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	private void Search(){
-		//anim.SetBool("Battle", false);
+
 		Movement ();
 
 		myTransform.LookAt (target);
 		anim.SetBool ("Follow", true);
 		anim.SetBool ("Battle", false);
+		anim.StopPlayback ();
+		Debug.Log ("Searching ");
 		statement = EnemyAI.State.Action;
 	}
 
@@ -105,7 +111,6 @@ public class EnemyAI : MonoBehaviour {
 		//Movement ();
 		statement = EnemyAI.State.Search;
 	}
-
 
 
 	private void Movement(){
@@ -144,7 +149,7 @@ public class EnemyAI : MonoBehaviour {
 
 	public void OnTriggerEnter(Collider other){
 		if(other.CompareTag ("Player")){
-			target = other.transform;
+			target = other.gameObject.transform;
 			targetAlive = true;
 			StartCoroutine("FSM");
 		}
@@ -152,7 +157,11 @@ public class EnemyAI : MonoBehaviour {
 
 	public void OnTriggerExit(Collider other){
 		if(other.CompareTag ("Player")){
-			target = home;
+			target = gameObject.transform;
+			StopCoroutine("FSM");			
+			anim.SetBool ("Follow", false);
+			anim.SetBool ("Battle", false);
+			Movement();
 
 		}
 	}

@@ -5273,6 +5273,7 @@ GameObject:
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400014}
   m_Layer: 0
   m_Name: GOBLIN
   m_TagString: Enemy
@@ -9830,8 +9831,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100700}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 329.649994, y: 5.51999998, z: -144.960007}
+  m_LocalRotation: {x: 0, y: -.414785802, z: 0, w: .909919143}
+  m_LocalPosition: {x: -275.920715, y: 5.10895538, z: 342.663635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400698}
@@ -9952,7 +9953,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100700}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d50c8d97cdf17954886e28b62a8235d5, type: 3}
   m_Name: 
@@ -9967,7 +9968,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100700}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9242c9f86a5f75409e7c6e6ae4f2c84, type: 3}
   m_Name: 
@@ -10012,7 +10013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b0217b842aadcb409d41553bf0b93c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targeting: {fileID: 0}
+  targeting: {fileID: 11400032, guid: 44f955e23a60a9f4786b59ad1eebcef5, type: 2}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10040,6 +10041,17 @@ MonoBehaviour:
   P_Transform: {fileID: 0}
   DeathSound: {fileID: 0}
   Enemy: 1
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4062ef4bbc3589a4093e215d9ca39cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
