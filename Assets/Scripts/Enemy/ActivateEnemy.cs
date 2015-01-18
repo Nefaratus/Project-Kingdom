@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ActivateEnemy : MonoBehaviour {
 
+	public GameObject enemies;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,13 +17,11 @@ public class ActivateEnemy : MonoBehaviour {
 
 	void OnTriggerEnter()
 	{
-		gameObject.GetComponent<AdvanceMovement> ().enabled = true;
-		gameObject.GetComponent<EnemyAI> ().enabled = true;
+		enemies.SetActive (true);
 	}
 
 	void OnTriggerExit()
 	{
-		gameObject.GetComponent<AdvanceMovement> ().enabled = false;
-		gameObject.GetComponent<EnemyAI> ().enabled = false;
+		enemies.SetActive (false);
 	}
 }
