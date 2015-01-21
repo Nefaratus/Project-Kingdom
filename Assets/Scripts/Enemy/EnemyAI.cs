@@ -109,7 +109,7 @@ public class EnemyAI : MonoBehaviour {
 		{
 			if(Time.time > nextPunch)
 			{
-				fight.strike(target.gameObject,10,3);
+				fight.strike(target.gameObject,10,4);
 				nextPunch = Time.time + cooldown;
 			}
 		}
