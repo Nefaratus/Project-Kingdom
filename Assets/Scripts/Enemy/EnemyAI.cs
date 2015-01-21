@@ -105,17 +105,18 @@ public class EnemyAI : MonoBehaviour {
 		Debug.Log ("Fight");
 		anim.SetBool ("Follow", false);
 		anim.SetBool ("Battle", true);	
-		if(Vector3.Distance(this.gameObject.transform.position, target.position) < 5)
-		{
+		statement = EnemyAI.State.Search;
+		//if(Vector3.Distance(this.gameObject.transform.position, target.position) < 2)
+		//{
 			if(Time.time > nextPunch)
 			{
 				fight.strike(target.gameObject,10,4);
 				nextPunch = Time.time + cooldown;
 			}
-		}
+		//}
 		else
 		{
-			statement = EnemyAI.State.Search;
+		statement = EnemyAI.State.Search;
 		}
 	}
 	/// <summary>
