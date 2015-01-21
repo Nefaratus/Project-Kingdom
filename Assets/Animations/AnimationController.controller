@@ -250,8 +250,8 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110296588}
   m_DstState: {fileID: 110200000}
-  m_TransitionDuration: .349823385
-  m_TransitionOffset: 0
+  m_TransitionDuration: .254271656
+  m_TransitionOffset: .567777634
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Battle
@@ -330,7 +330,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: ea95dbf1db9a0024fbc918a63ab41ee2, type: 3}
+  - {fileID: 7400000, guid: 62725544812432b47b9d1d8dc9ca784f, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 552, y: 312, z: 0}
   m_IKOnFeet: 0
