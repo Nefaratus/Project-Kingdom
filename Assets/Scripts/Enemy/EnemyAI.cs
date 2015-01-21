@@ -33,12 +33,17 @@ public class EnemyAI : MonoBehaviour {
 
 	private Animator anim;
 
+	Combat fight;
+	float nextPunch;
+	int cooldown = 2;
+
 	void Start(){
 		statement = EnemyAI.State.Init;
 		StartCoroutine ("FSM");		
 		anim = GetComponent<Animator>();
 		startpos = gameObject.transform.position;
 		home = GameObject.FindGameObjectWithTag ("home");
+		fight = GetComponent<Combat> ();
 	}
 
 	private IEnumerator FSM(){
@@ -100,7 +105,11 @@ public class EnemyAI : MonoBehaviour {
 	private void Action(){
 		Debug.Log ("Fight");
 		anim.SetBool ("Follow", false);
-		anim.SetBool ("Battle", true);	
+		anim.SetBool ("Battle", true);
+		if(Time.time > nextPunch){
+		fight.strike(target.GetComponent<Combat>(),10);
+			nextPunch = Time.time + cooldown;
+			}
 		statement = EnemyAI.State.Search;
 	}
 	/// <summary>
