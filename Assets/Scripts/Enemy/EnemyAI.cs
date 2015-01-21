@@ -32,10 +32,9 @@ public class EnemyAI : MonoBehaviour {
 	private Vector3 startpos;
 
 	private Animator anim;
-
 	Combat fight;
-	float nextPunch;
 	int cooldown = 2;
+	float nextPunch;
 
 	void Start(){
 		statement = EnemyAI.State.Init;
@@ -105,12 +104,19 @@ public class EnemyAI : MonoBehaviour {
 	private void Action(){
 		Debug.Log ("Fight");
 		anim.SetBool ("Follow", false);
-		anim.SetBool ("Battle", true);
-		if(Time.time > nextPunch){
-		fight.strike(target.GetComponent<Combat>(),10);
-			nextPunch = Time.time + cooldown;
+		anim.SetBool ("Battle", true);	
+		if(Vector3.Distance(this.gameObject.transform.position, target.position) < 5)
+		{
+			if(Time.time > nextPunch)
+			{
+				fight.strike(target.gameObject,10,3);
+				nextPunch = Time.time + cooldown;
 			}
-		statement = EnemyAI.State.Search;
+		}
+		else
+		{
+			statement = EnemyAI.State.Search;
+		}
 	}
 	/// <summary>
 	/// Volgt de speler binnend het spel.
